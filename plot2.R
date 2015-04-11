@@ -88,6 +88,6 @@ plot2 <- function() {
                        Global_active_power, 
                        type = "l", 
                        xlab = NA, 
-                       ylab = "Global Active ower (kilowatts)"))
+                       ylab = "Global Active Power (kilowatts)"))
     dev.off()
 }
