@@ -86,7 +86,7 @@ plot4 <- function() {
     png("plot4.png", width = 480, height = 480, units = "px")
     par(mfrow = c(2, 2), cex = 0.7)
     with(data_df, {
-        plot(Timestamp, Global_active_power, type = "l", xlab = NA)
+        plot(Timestamp, Global_active_power, type = "l", xlab = NA, ylab = "Global Active Power")
         plot(Timestamp, Voltage, type = "l", xlab = "datetime")
         plot(Timestamp, Sub_metering_1, type = "l", xlab = NA, ylab = "Energy sub metering")
         lines(Timestamp, Sub_metering_2, type = "l", col = "Red")
