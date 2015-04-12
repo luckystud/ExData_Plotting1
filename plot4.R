@@ -92,7 +92,7 @@ plot4 <- function() {
         plot(Timestamp, Sub_metering_1, type = "l", xlab = NA, ylab = "Energy sub metering")
         lines(Timestamp, Sub_metering_2, type = "l", col = "Red")
         lines(Timestamp, Sub_metering_3, type = "l", col = "Blue")
-        legend("topright", lty = 1, col = c("Black", "Red", "Blue"), 
+        legend("topright", bty = "n", lty = 1, col = c("Black", "Red", "Blue"), 
                legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
         plot(Timestamp, Global_reactive_power, type = "l", xlab = "datetime")
     })
