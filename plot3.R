@@ -1,6 +1,6 @@
 # Create a data frame from the "household_power_consumption.txt file
 # from Feb 1, 2007 to Feb 2, 2007.
-get_df <- function() {
+get_df <- function(startdate) {
     con <- file("household_power_consumption.txt", open = "r")
     # First line is header
     oneLine <- readLines(con, n = 1, warn = FALSE)
@@ -8,8 +8,8 @@ get_df <- function() {
     headerVec <- c("Timestamp", tmpHeaderVec[3:9])
     
     # Set days to collect data
-    day1 <- as.Date("02/01/2007", "%m/%d/%Y")
-    day2 <- as.Date("02/02/2007", "%m/%d/%Y")
+    day1 <- as.Date(startdate, "%m/%d/%Y")
+    day2 <- day1 + 1
     
     # Initialize vectors
     timeVec <- c()
@@ -83,7 +83,7 @@ get_df <- function() {
 
 # Overlay 2 plots on another plots and add a legend
 plot3 <- function() {
-    data_df <- get_df()
+    data_df <- get_df("02/01/2007")
     png("plot3.png", width = 480, height = 480, units = "px")
     with(data_df, plot(Timestamp, Sub_metering_1, type = "l", xlab = NA, ylab = "Energy sub metering"))
     with(data_df, lines(Timestamp, Sub_metering_2, type = "l", col = "Red"))
