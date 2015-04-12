@@ -81,6 +81,7 @@ get_df <- function() {
     df
 }
 
+# Overlay 2 plots on another plots and add a legend
 plot3 <- function() {
     data_df <- get_df()
     png("plot3.png", width = 480, height = 480, units = "px")

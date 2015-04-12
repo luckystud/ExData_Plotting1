@@ -81,6 +81,7 @@ get_df <- function() {
     df
 }
 
+# Display 4 plots in a 2x2 array.
 plot4 <- function() {
     data_df <- get_df()
     png("plot4.png", width = 480, height = 480, units = "px")

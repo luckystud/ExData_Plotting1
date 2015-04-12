@@ -81,6 +81,7 @@ get_df <- function() {
     df
 }
 
+# Set the y axis label of this plot
 plot2 <- function() {
     data_df <- get_df()
     png("plot2.png", width = 480, height = 480, units = "px")
